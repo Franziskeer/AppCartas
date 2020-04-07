@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <div class="ion-text-start" style="padding-top: 5px;">
+              Card-decks
+            </div>
+          </ion-col>
+          <ion-col>
+            <div class="ion-text-end">
+              <ion-icon class="exit-icon" name="close-circle"></ion-icon>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let cardDeck of cardDecks">
+      <ion-avatar slot="start">
+        <img [src]="'../../assets/image/' + cardDeck + '.png'">
+      </ion-avatar>
+      <ion-label>
+        <h2> {{cardDeck}} </h2>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
