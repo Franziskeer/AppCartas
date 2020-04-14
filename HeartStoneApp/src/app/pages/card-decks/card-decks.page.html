@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <div class="ion-text-start" style="padding-top: 5px;">
+              Card-decks
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <app-card-deck *ngFor="let cardDeck of cardDecks" [myCardDeck]="cardDeck" (clicked)="select($event)">
+    </app-card-deck>
+  </ion-list>
+  <p>
+    Selected Card Decks:
+    <span *ngFor="let name of selectedCDs">{{name}}&nbsp;</span>
+  </p>
+</ion-content>

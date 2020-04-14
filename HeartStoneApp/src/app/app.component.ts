@@ -30,9 +30,10 @@ export class AppComponent {
 
   async showToast() {
     const toast = await this.toastController.create({
-      message: 'Welcome to HeartStoneApp!',
-      position: 'top',
-      duration: 2000
+      header: 'HearthStone',
+      message: 'Welcome to HearthStoneApp!',
+      position: 'middle',
+      duration: 2000,
     }); 
     toast.present();
   }

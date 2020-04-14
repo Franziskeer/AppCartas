@@ -8,7 +8,7 @@ import { Platform } from '@ionic/angular';
 })
 export class AboutPage implements OnInit {
 
-  readonly appName:string = "HeartStoneApp"
+  readonly appName:string = "HearthStoneApp"
   readonly releaseDate:string = "07/04/2020"
   readonly version:string = "v1.0"
   readonly autor:string = "Francisco Piñero Alpañés"
@@ -21,6 +21,6 @@ export class AboutPage implements OnInit {
 
   public exitApp() {
     confirm('Do you want to exit from the app?');
-    navigator['app'].exitApp();
+    //this.platform.exitApp()
   }
 }
